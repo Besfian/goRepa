@@ -1,4 +1,4 @@
-package cash
+package goRepa
 
 type Cache struct {
 	userId int
