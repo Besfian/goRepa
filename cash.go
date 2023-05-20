@@ -1,21 +1,30 @@
 package goRepa
 
 type Cache struct {
-	userId int
+	Email    string
+	Password string
+	Username string
+	Id       int
 }
 
 func New() Cache {
 	return Cache{}
 }
 
-func (cache *Cache) Get() int {
-	return cache.userId
+func (cache *Cache) Get() *Cache {
+	return cache
 }
 
-func (cache *Cache) Set(userId int) {
-	cache.userId = userId
+func (cache *Cache) Set(Email string, Password string, Username string, Id int) {
+	cache.Email = Email
+	cache.Password = Password
+	cache.Username = Username
+	cache.Id = Id
 }
 
 func (cache *Cache) Delete() {
-	cache.userId = 0
+	cache.Email = ""
+	cache.Password = ""
+	cache.Username = ""
+	cache.Id = 0
 }
